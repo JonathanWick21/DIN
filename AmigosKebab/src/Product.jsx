@@ -1,33 +1,30 @@
-
-
-function Product(props)
-    { const {image, name, precio, descripcion} = props;
+function Product(props) {
+    const { image, name, precio, descripcion } = props;
     return (
         <article
-            tabIndex = "0"
-            aria-label = {`Producto ${name}`}
-            className = 'background-white product_card p-4 rounded-lg shadow-md flex flex-col items-center max-w-[320px] mx-auto' 
+            tabIndex="0"
+            aria-label={`Producto ${name}`}
+            className="product-card"
         >
-            <figure className="w-full aspect-square rounded-lg bg-gray-100 overflow-hidden">
+            <figure className="product-figure">
                 <img
                     src={image}
                     alt={`Foto de ${name}`}
                     loading="lazy"
-                    className="w-full h-full object-cover"
+                    className="product-img"
                 />
                 <figcaption className="sr-only">{descripcion}</figcaption>
             </figure>
 
-            <div className="pt-5 text-center">
+            <div className="product-body">
                 <header>
-                    <h2>
-                        {name}
-                    </h2>
+                    <h2 className="product-name">{name}</h2>
                 </header>
-                <p className="text-sm text-gray-600"><strong>{precio} €</strong></p>
+                <p className="product-price"><strong>{precio} €</strong></p>
+                <p className="product-desc">{descripcion}</p>
             </div>
         </article>
-    )
+    );
 }
 
 export default Product;

@@ -40,3 +40,133 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Product card styles (replacement for Tailwind utilities) */
+.product-card {
+  background: transparent;
+  color: #111111;
+  padding: 0.5rem 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 1rem 0;
+}
+.product-figure {
+  width: 100%;
+  height: 240px;
+  border-radius: 0;
+  background: transparent;
+  overflow: hidden;
+}
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+}
+.product-body {
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+}
+.product-name {
+  margin: 0;
+  font-size: 1.05rem;
+}
+.product-price {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-top: 0.25rem;
+}
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Catalogue list: single column layout */
+.catalogue-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+/* Desktop: 4 columns, Tablet: 2 columns, Mobile: 1 column */
+@media (min-width: 768px) {
+  .catalogue-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .catalogue-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Make sure product headings are clearly separated */
+.product-card header {
+  margin-bottom: 0.25rem;
+}
+
+/* Card look similar to image 2 */
+.product-card {
+  background: transparent;
+  color: #111;
+  padding: 0.5rem;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: none;
+  margin: 0;
+}
+.product-figure {
+  width: 100%;
+  height: 180px; /* imágenes más pequeñas */
+  border-radius: 0;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-img {
+  width: auto;
+  max-width: 90%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border: none;
+}
+.product-body {
+  padding-top: 0.75rem;
+  text-align: left;
+}
+.product-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #111;
+}
+.product-price {
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 0.35rem;
+}
+.product-desc {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: #666;
+}

@@ -13,6 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add custom global styles here. Tailwind utilities are available throughout the app. */
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,10 +30,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  display: block;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #e9e9eb; /* light grey page background like image 2 */
 }
 
 h1 {
